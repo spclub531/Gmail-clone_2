@@ -64,7 +64,7 @@ main{
     background: white;
     border-radius: 20px;
     height: 90vh;
-    width: 78vw;
+    width: 82vw;
 }
 #left-sidebar button{
     background: #c2e7ff;
@@ -133,6 +133,14 @@ margin-left: 15px;
 .message p:nth-of-type(1){
     font-weight: bold;
     width: 10vw;
+}
+.message p:nth-of-type(3){
+    font-weight: bold;  
+    
+}
+.message date{
+    margin-left: 20px;
+    width: 50vw;
 }
 .edit{
     display:inline-block;

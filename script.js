@@ -16,40 +16,49 @@ function send(msg) {
 
     <p>${msg.title}</p>
     <p>${msg.subject}</p>
+    <p>${msg.date}</p>
     `;
 
     document.getElementById('messagebox').appendChild(message);
 }
 send({
     title: 'Zomato',
-    subject: 'Are you Hungry ! hurry up'
+    subject: 'Are you Hungry ! hurry up what are you waiting for then',
+    date: '3 april'
 });
 send({
     title: 'Swiggy',
-    subject: 'new delivery for you'
+    subject: 'new deliveries for you',
+    date: '30 march'
 });
 send({
      title: 'Grow',
-     subject: 'statements of accounts of funda nad balances'
+     subject: 'statements of accounts of funda nad balances',
+     date: '29 march'
 });
 send({
     title: 'Linkdln',
-    subject: 'tata consultancy services'
+    subject: 'tata consultancy services',
+    date: '28 march'
 });
 send({
     title: 'simplilearn',
-    subject: 'celebrate holi with a flat scholarship'
+    subject: 'celebrate holi with a flat scholarship',
+    date: '25 march'
 });
 send({
     title: 'swiggy',
-    subject: 'welcome to the winners club'
+    subject: 'welcome to the winners club',
+    date: '20 march'
 });
 send({
     title: 'services',
-    subject: 'Transaction in your demant account'
+    subject: 'Transaction in your demant account',
+    date: '18 feb'
 });
 send({
     title: 'Team scaler',
-    subject: 'fundamnetals of Docker and Kubernetes'
+    subject: 'fundamnetals of Docker and Kubernetes',
+    date: '15 jan'
 });
 
