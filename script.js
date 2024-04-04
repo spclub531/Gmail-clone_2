@@ -16,7 +16,6 @@ function send(msg) {
 
     <p>${msg.title}</p>
     <p>${msg.subject}</p>
-    <p>${msg.date}</p>
     `;
 
     document.getElementById('messagebox').appendChild(message);
@@ -24,41 +23,99 @@ function send(msg) {
 send({
     title: 'Zomato',
     subject: 'Are you Hungry ! hurry up what are you waiting for then',
-    date: '3 april'
 });
 send({
     title: 'Swiggy',
     subject: 'new deliveries for you',
-    date: '30 march'
+    
 });
 send({
      title: 'Grow',
      subject: 'statements of accounts of funda nad balances',
-     date: '29 march'
+     
 });
 send({
     title: 'Linkdln',
     subject: 'tata consultancy services',
-    date: '28 march'
 });
 send({
     title: 'simplilearn',
     subject: 'celebrate holi with a flat scholarship',
-    date: '25 march'
 });
 send({
     title: 'swiggy',
     subject: 'welcome to the winners club',
-    date: '20 march'
 });
 send({
     title: 'services',
     subject: 'Transaction in your demant account',
-    date: '18 feb'
 });
 send({
     title: 'Team scaler',
     subject: 'fundamnetals of Docker and Kubernetes',
-    date: '15 jan'
+});
+send({
+    title: 'Team scaler',
+    subject: 'fundamnetals of Docker and Kubernetes',
+});
+send({
+    title: 'Team scaler',
+    subject: 'fundamnetals of Docker and Kubernetes',
+});
+send({
+    title: 'Team scaler',
+    subject: 'fundamnetals of Docker and Kubernetes',
+});
+send({
+    title: 'Team scaler',
+    subject: 'fundamnetals of Docker and Kubernetes',
+});
+send({
+    title: 'Team scaler',
+    subject: 'fundamnetals of Docker and Kubernetes',
+});
+
+const composeButton = document.getElementById('compose-button');
+const composeModal = document.getElementById('compose-modal');
+const overlay = document.getElementById('overlay');
+
+composeButton.addEventListener('click', function() {
+    // Show the modal and overlay
+    composeModal.style.display = 'block';
+    overlay.style.display = 'block';
+});
+
+// Function to handle form submission
+document.getElementById('compose-email-form').addEventListener('submit', function(event) {
+    event.preventDefault();
+
+    // Get form data
+    const formData = new FormData(this);
+    const emailData = {
+        to: formData.get('to'),
+        subject: formData.get('subject'),
+        body: formData.get('body')
+    };
+
+    // Store email data in localStorage
+    let sentEmails = JSON.parse(localStorage.getItem('sentEmails')) || [];
+    sentEmails.push(emailData);
+    localStorage.setItem('sentEmails', JSON.stringify(sentEmails));
+
+    // Clear form fields
+    this.reset();
+    
+    // Hide the modal and overlay after submission
+    composeModal.style.display = 'none';
+    overlay.style.display = 'none';
+
+    // Show success message
+    alert('Email sent successfully and saved!');
+});
+
+// Close the modal when clicking outside of it
+overlay.addEventListener('click', function() {
+    composeModal.style.display = 'none';
+    overlay.style.display = 'none';
 });
 
